@@ -1,5 +1,6 @@
+import dotenv from "dotenv";
 dotenv.config();
-console.log(process.env.MONGO_URL); ///env-environmental variables
+ ///env-environmental variables
 const app = express();
 
 in index.js
@@ -11,6 +12,14 @@ import dotenv from "dotenv";
 and we declare port to be anything as fixed port can be assured.
 
 const PORT = process.env.PORT;
-app.listen(PORT, function () {
-  console.log("Server started successfully");
-});
+
+
+const envfile = process.env.MONGO_URL;
+
+
+async function createConnection() {
+  const client = new MongoClient(envfile);
+  await client.connect();
+  console.log("Mongodb is connected ✌😊");
+  return client;
+}

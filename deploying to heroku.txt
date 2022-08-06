@@ -1,0 +1,27 @@
+to push to heroku
+
+
+first
+git init
+git add .
+git commit -m "message"
+git push - origin main
+
+then if gitrepo is not initialized
+create a new repo
+and then while creating
+3 commands will be there
+give those 3 comans in vs code terminal
+
+
+open heroku app
+create new app
+then key value in configs inside settings
+give both port number also
+enable automatic deploys
+connect to github
+select the repo
+then heroku will run
+give the specific name
+
+eg-https://nodejsnew2.herokuapp.com/movies/allmovies
