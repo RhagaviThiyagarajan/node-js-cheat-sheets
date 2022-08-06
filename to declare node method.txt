@@ -1,0 +1,9 @@
+to declare
+
+get method in node.js
+
+
+app.get("/",function(req,res)
+{
+  res.send("HELLO😁");
+})

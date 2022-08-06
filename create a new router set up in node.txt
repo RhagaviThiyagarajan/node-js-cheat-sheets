@@ -1,0 +1,48 @@
+to conect router
+create a new file
+.js file
+
+copy all the methods
+crud methods and paste it in separate file
+delete in index file
+
+then
+
+import express from "express";
+const router=express.Router();
+
+
+before app.get
+
+
+replace app.get with router.get
+
+and at the end ,use 
+export const moviesRouter=router;
+
+in index.js
+use import {moviesRouter} from "./routes/movies.js";
+in import
+
+
+and in index.js
+app.use('./movies',moviesRouter)
+
+after app.use(middleware)
+
+
+
+we already have /movies in index.js
+so removing /movies
+example
+
+ router.put("/movies/:id", async function (req, res)
+
+replace with 
+ router.put("/:id", async function (req, res)
+
+
+client will be undefined in movies.js(the new file)
+
+export const client = await createConnection(); in index.js
+ and import {client} from "../index.js

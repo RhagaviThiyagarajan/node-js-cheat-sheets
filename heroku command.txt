@@ -1,0 +1,44 @@
+git commit
+git push
+ git push --set-upstream origin main
+git remote -v
+git push origin master
+heroku logs
+ heroku logs -a rhagavi-app
+
+mongodb
+npm i mongodb
+
+to connect mongodb
+//const MONGO_URL="mongodb://localhost";//node 16 & before
+
+
+//if v-16+
+
+async function createConnection() {
+        const client = new MongoClient(MONGO_URL);
+        await client.connect();
+        console.log("Mongo is connected ✌😊");
+        return client;
+      }
+      
+      const client = await createConnection();
+
+linux
+-netstat -ano | findstr :6000
+
+     
+
+taskkill /PID 4192 /F
+
+
+
+MONGO_URL="mongodb+srv://rhagavi:rhagR123@cluster0.ubm2h.mongodb.net"
+
+
+
+to set up heroku
+const PORT = process.env.PORT;
+app.listen(PORT, function () {
+  console.log("Server started successfully");
+});
