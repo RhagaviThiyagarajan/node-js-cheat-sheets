@@ -1,0 +1,95 @@
+to create a diferent user
+
+
+use
+app.use("/users",usersRouter); in index.js
+
+replace post method alone and create a different separate js file
+users.js
+
+in the helper.js
+change the function name as createUsers
+and change the db name as users
+in the users too
+change the function name as createUsers
+
+
+in the postman
+give the body as
+ js and send
+
+
+check in cluster too
+
+
+if the db is available
+
+the password is visible
+so to decrypt(hide)it
+npm i bcrypt
+
+
+import 
+import bcrypt from "bcrypt";
+
+in index.js
+create a new function for hashpassword
+
+async function genHashPssword(password)
+
+{
+const NO_OF_ROUNDS = 10;
+const salt= await brycpt.genSalt(NO_OF_ROUNDS );//gensalt is an inbuilt keyword
+ console.log(salt);
+}
+
+genHashPassword("password@123");
+
+
+so when we use npm run dev
+we will get random string 
+
+
+and again
+async function genHashPssword(password)
+
+{
+const NO_OF_ROUNDS = 10;
+const salt= await brycpt.genSalt(NO_OF_ROUNDS );
+//gensalt is an inbuilt keyword
+ 
+const hashPassword= await bcrypt.hash(password, salt);
+console.log(salt);
+console.log(hashPassword);
+
+//this hashPassword-is an inbuilt  value
+$2b$10$GxPWO4Dj3tqFLNfqT71GAO10PJucqHyPWKXowJEl2l0UGUT66cK0S
+
+1st 2 digits-algorithm($2b)
+
+2 nd-number of rounds($10$)
+
+then salt(GxPWO4Dj3tqFLNfqT71GAO)
+
+then hashpassword(10PJucqHyPWKXowJEl2l0UGUT66cK0S)
+
+
+
+}
+
+genHashPassword("password@123");
+
+if the pasword needs to match
+
+    const storedPassword = userFromDB.password;
+ const  isPasswordMatch= await bcrypt.compare(password,storedPassword)
+
+
+
+password-given passwrd(eg-welcome@123)
+storedPassword-salt+hashvalue
+so given password converts into salt + password
+and then
+stored password is already a salt+ hashValue
+
+matches

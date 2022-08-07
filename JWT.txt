@@ -1,0 +1,36 @@
+JWT
+JSON WEB TOKEN
+
+npm i jsonwebtoken
+iport jwt from "jsonwebtoken";
+
+
+if both userName & password matches
+  const token =jwt.sign
+
+
+  const token =jwt.sign({id:userFromDB._id},process.env.SECRET_KEY);
+
+unique is Id
+so
+userFromDb._id
+store the secret key in .env file.
+
+Every user will get different tokens.
+
+
+
+if we wanted to protect-Get all movies route
+
+common place for all the rest Api's is
+headers
+
+headers-
+key-     x-auth-token
+value-   token which we get after clicking send button
+
+paste it.
+
+
+
+and the data will come.

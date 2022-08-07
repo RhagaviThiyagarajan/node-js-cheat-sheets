@@ -1,0 +1,22 @@
+to create a diferent user
+
+
+use
+app.use("/users",usersRouter); in index.js
+
+replace post method alone and create a different separate js file
+users.js
+
+in the helper.js
+change the function name as createUsers
+and change the db name as users
+in the users too
+change the function name as createUsers
+
+
+in the postman
+give the body as
+ js and send
+
+
+check in cluster too
